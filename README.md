@@ -68,7 +68,7 @@ The app will be available at `http://localhost:3050`
 ```
 purrkit/
 ├── apps/
-│   ├── web/          # Main PurrKit Generator application
+│   ├── frontend/          # Main PurrKit Generator application
 │   └── backend/      # API server for website generation
 ├── packages/
 │   ├── ui/           # Shared UI components
