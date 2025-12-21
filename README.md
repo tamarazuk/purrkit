@@ -26,7 +26,7 @@ We're starting with the website generator, but the vision extends to a full suit
 - ✅ Customizable colors and branding
 
 **Coming soon:**
-- 🚧 AI-powered website generation (Claude API integration)
+- 🚧 AI-powered website generation using free AI APIs
 - 🚧 Downloadable Next.js website as a zip file
 - 🚧 Custom content generation based on your rescue's story
 
@@ -68,7 +68,8 @@ The app will be available at `http://localhost:3050`
 ```
 purrkit/
 ├── apps/
-│   └── web/          # Main PurrKit Generator application
+│   ├── web/          # Main PurrKit Generator application
+│   └── backend/      # API server for website generation
 ├── packages/
 │   ├── ui/           # Shared UI components
 │   ├── eslint-config/

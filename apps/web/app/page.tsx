@@ -1,102 +1,59 @@
-import Image, { type ImageProps } from "next/image";
-import { Button } from "@repo/ui/button";
-import styles from "./page.module.css";
+'use client'
 
-type Props = Omit<ImageProps, "src"> & {
-  srcLight: string;
-  srcDark: string;
-};
-
-const ThemeImage = (props: Props) => {
-  const { srcLight, srcDark, ...rest } = props;
-
-  return (
-    <>
-      <Image {...rest} src={srcLight} className="imgLight" />
-      <Image {...rest} src={srcDark} className="imgDark" />
-    </>
-  );
-};
+import { GeneratorLayout } from '@/components/generator/layout/generator-layout'
+import { WebsiteGeneratorForm } from '@/components/generator/forms/website-generator-form'
+import { SuccessScreen } from '@/components/generator/views/success-screen'
+import { useGeneratorForm } from '@/hooks/use-generator-form'
+import { useLogoUpload } from '@/hooks/use-logo-upload'
+import { useFormSubmission } from '@/hooks/use-form-submission'
+import { PawPrint } from 'lucide-react'
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <ThemeImage
-          className={styles.logo}
-          srcLight="turborepo-dark.svg"
-          srcDark="turborepo-light.svg"
-          alt="Turborepo logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>apps/web/app/page.tsx</code>
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const form = useGeneratorForm()
+  const logo = useLogoUpload()
+  const submission = useFormSubmission()
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new/clone?demo-description=Learn+to+implement+a+monorepo+with+a+two+Next.js+sites+that+has+installed+three+local+packages.&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F4K8ZISWAzJ8X1504ca0zmC%2F0b21a1c6246add355e55816278ef54bc%2FBasic.png&demo-title=Monorepo+with+Turborepo&demo-url=https%3A%2F%2Fexamples-basic-web.vercel.sh%2F&from=templates&project-name=Monorepo+with+Turborepo&repository-name=monorepo-turborepo&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fturborepo%2Ftree%2Fmain%2Fexamples%2Fbasic&root-directory=apps%2Fdocs&skippable-integrations=1&teamSlug=vercel&utm_source=create-turbo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://turborepo.com/docs?utm_source"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  if (submission.isSuccess) {
+    return (
+      <GeneratorLayout>
+        <SuccessScreen
+          rescueName={form.formData.rescueName}
+          onReset={() => {
+            submission.reset()
+            form.resetForm()
+            logo.clearLogo((file) => form.updateField('logo', file))
+          }}
+        />
+      </GeneratorLayout>
+    )
+  }
+
+  return (
+    <GeneratorLayout>
+      {/* Header */}
+      <header className="mb-12 text-center">
+        <div className="mb-4 flex items-center justify-center gap-3">
+          <PawPrint className="text-teal h-8 w-8" />
+          <h1 className="text-foreground text-4xl font-bold text-balance md:text-5xl">
+            PurrKit Generator
+          </h1>
         </div>
-        <Button appName="web" className={styles.secondary}>
-          Open alert
-        </Button>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com/templates?search=turborepo&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://turborepo.com?utm_source=create-turbo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to turborepo.com →
-        </a>
+        <p className="text-teal mb-2 text-xl font-medium md:text-2xl">
+          Create your rescue`&apos;s website in minutes
+        </p>
+        <p className="text-muted-foreground mx-auto max-w-2xl text-lg text-pretty">
+          Fill out a few details, and we&apos;ll generate your custom website
+        </p>
+      </header>
+
+      <WebsiteGeneratorForm form={form} logo={logo} submission={submission} />
+
+      <footer>
+        <p className="text-muted-foreground/80 mt-8 text-center text-sm">
+          No technical skills required. Your website will be ready in seconds!
+          🐾
+        </p>
       </footer>
-    </div>
-  );
+    </GeneratorLayout>
+  )
 }
