@@ -6,7 +6,7 @@ PurrKit is an open-source platform designed to help cat rescue organizations cre
 
 [![Turborepo](https://img.shields.io/badge/Turborepo-000000?logo=turborepo&logoColor=white)](https://turborepo.com/)
 [![pnpm](https://img.shields.io/badge/pnpm-000000?style=flat&logo=pnpm&logoColor=white)](https://pnpm.io/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)  
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0F172A?style=flat&logo=tailwindcss&logoColor=38BDF8)](https://tailwindcss.com/)
 [![React](https://img.shields.io/badge/React-149ECA?style=flat&logo=react&logoColor=white)](https://react.dev/)
@@ -29,7 +29,6 @@ PurrKit solves this by providing:
 
 We're starting with the website generator and CMS, but the vision extends to a full suite of tools including foster coordination, adoption application tracking, and a unified operations dashboard. Check out our [roadmap](./ROADMAP.md) to see where we're headed!
 
----
 
 ## 🏗️ Architecture
 
@@ -60,7 +59,6 @@ We're starting with the website generator and CMS, but the vision extends to a f
 - **API-driven content** - Rescues can switch hosting providers anytime without losing data.
 - **Minimal setup** - Simple form generates a complete, professional website that can be hosted for free on Vercel, Netlify or similar providers.
 
----
 
 # 🚀 Current Status
 
@@ -88,7 +86,6 @@ We're starting with the website generator and CMS, but the vision extends to a f
 
 **Target:** Working MVP by January 2025
 
----
 
 ## 🛠 Tech Stack
 
@@ -110,7 +107,6 @@ We're starting with the website generator and CMS, but the vision extends to a f
 - Cloudflare Workers (CMS hosting)
 - Vercel/Netlify (generated sites)
 
----
 
 ## 📦 Getting Started
 
@@ -154,7 +150,6 @@ purrkit/
 └── ROADMAP.md              # Detailed feature roadmap
 ```
 
----
 
 ## 🗺 Roadmap
 
@@ -183,7 +178,6 @@ Check out our [detailed roadmap](./ROADMAP.md) to see what's planned for PurrKit
 
 **Long-term vision:** If PurrKit helps 100+ rescues launch websites, that's thousands of cats getting visibility and finding homes. This could scale beyond cats to other animal rescues and nonprofit organizations facing similar challenges.
 
----
 
 ## 💡 Why I'm Building This
 
@@ -196,7 +190,6 @@ As a software engineer with 15+ years of experience, I wanted to use my skills t
 - My rescue experience (I know what rescues actually need)
 - My values (technology should help communities, not create barriers)
 
----
 
 ## 🤝 Contributing
 
@@ -211,7 +204,6 @@ We welcome contributions! PurrKit is being built to serve the rescue community, 
 
 **Current Status:** Project is in early MVP development. External contributions will be welcomed once the core architecture is stable (Q1 2025).
 
----
 
 ## 💜 Connect
 
@@ -221,7 +213,6 @@ We welcome contributions! PurrKit is being built to serve the rescue community, 
 
 **Purrfect Paths Rescue:** [purrfectpathsrescue.com](https://purrfectpathsrescue.com)
 
----
 
 Built with 💜 for the rescue community. Every cat deserves a chance, and every rescue deserves great tools.
 
