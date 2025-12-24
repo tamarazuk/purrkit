@@ -9,7 +9,7 @@ PurrKit is an open-source platform designed to help cat rescue organizations cre
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)  
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0F172A?style=flat&logo=tailwindcss&logoColor=38BDF8)](https://tailwindcss.com/)
-[![React](https://img.shields.io/badge/React-149ECA?style=flat&logo=react&logoColor=white)](https://react.dev/)
+[![React](https://img.shields.io/badge/React-149ECA?style=flat&logo=react&logoColor=white)](https://react.dev/)  
 [![Payload CMS](https://img.shields.io/badge/Payload_CMS-000000?style=flat&logo=payloadcms&logoColor=white)](https://payloadcms.com/)
 
 ---
@@ -207,9 +207,9 @@ We welcome contributions! PurrKit is being built to serve the rescue community, 
 
 ## 💜 Connect
 
-**Portfolio:** [tamarazuk.dev](https://tamarazuk.dev)
-**GitHub:** [@tamarazuk](https://github.com/tamarazuk)
-**LinkedIn:** [linkedin.com/in/tamarazuk](https://linkedin.com/in/tamarazuk)
+**Portfolio:** [tamarazuk.dev](https://tamarazuk.dev)  
+**GitHub:** [@tamarazuk](https://github.com/tamarazuk)  
+**LinkedIn:** [linkedin.com/in/tamarazuk](https://linkedin.com/in/tamarazuk)  
 
 **Purrfect Paths Rescue:** [purrfectpathsrescue.com](https://purrfectpathsrescue.com)
 
