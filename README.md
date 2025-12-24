@@ -4,15 +4,19 @@
 
 PurrKit is an open-source platform designed to help cat rescue organizations create professional websites and manage their operations efficiently, without expensive software subscriptions or technical knowledge.
 
-[![Turborepo](https://img.shields.io/badge/Turborepo-000000?logo=turborepo&logoColor=white)](https://turborepo.com/) [![pnpm](https://img.shields.io/badge/pnpm-000000?style=flat&logo=pnpm&logoColor=white)](https://pnpm.io/) [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0F172A?style=flat&logo=tailwindcss&logoColor=38BDF8)](https://tailwindcss.com/) [![React](https://img.shields.io/badge/React-149ECA?style=flat&logo=react&logoColor=white)](https://react.dev/)
+[![Turborepo](https://img.shields.io/badge/Turborepo-000000?logo=turborepo&logoColor=white)](https://turborepo.com/)
+[![pnpm](https://img.shields.io/badge/pnpm-000000?style=flat&logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-0F172A?style=flat&logo=tailwindcss&logoColor=38BDF8)](https://tailwindcss.com/)
+[![React](https://img.shields.io/badge/React-149ECA?style=flat&logo=react&logoColor=white)](https://react.dev/)
 [![Payload CMS](https://img.shields.io/badge/Payload_CMS-000000?style=flat&logo=payloadcms&logoColor=white)](https://payloadcms.com/)
 
 ---
 
 ## 🎯 What is PurrKit?
 
-Cat rescues do incredible work, but many struggle with basic digital infrastructure. After founding [Purrfect Paths Rescue](https://purrfectpathsrescue.com), I quickly realized that most small, volunteer-run rescues face significant barriers without technical experience: expensive custom websites, clunky website builders that aren't rescue-specific, and no easy way to keep adoptable cat listings current.
+Cat rescues do incredible work, but many struggle with basic digital infrastructure. After founding [Purrfect Paths Rescue](https://purrfectpaths.com), I quickly realized that most small, volunteer-run rescues face significant barriers without technical experience: expensive custom websites, clunky website builders that aren't rescue-specific, and no easy way to keep adoptable cat listings current.
 
 PurrKit solves this by providing:
 
