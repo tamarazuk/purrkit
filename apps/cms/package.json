@@ -1,0 +1,80 @@
+{
+  "name": "@purrkit/cms",
+  "version": "1.0.0",
+  "description": "A headless CMS built with Payload CMS",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "cross-env NODE_OPTIONS=\"--no-deprecation --max-old-space-size=8000\" next build --webpack",
+    "deploy": "pnpm run deploy:database && pnpm run deploy:app",
+    "deploy:app": "opennextjs-cloudflare build --env=$CLOUDFLARE_ENV && opennextjs-cloudflare deploy --env=$CLOUDFLARE_ENV",
+    "deploy:database": "cross-env NODE_ENV=production PAYLOAD_SECRET=ignore payload migrate && wrangler d1 execute D1 --command 'PRAGMA optimize' --env=$CLOUDFLARE_ENV --remote",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev --port 3060",
+    "devsafe": "rm -rf .next && rm -rf .open-next && cross-env NODE_OPTIONS=--no-deprecation next dev --port 3060",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:types": "pnpm run generate:types:cloudflare && pnpm run generate:types:payload",
+    "generate:types:cloudflare": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "generate:types:payload": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "ii": "pnpm install --ignore-workspace",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+    "format": "prettier . --write",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview --env=$CLOUDFLARE_ENV",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "test": "pnpm run test:int && pnpm run test:e2e",
+    "test:e2e": "cross-env NODE_OPTIONS=\"--no-deprecation --no-experimental-strip-types\" pnpm exec playwright test",
+    "test:int": "cross-env NODE_OPTIONS=--no-deprecation vitest run --config ./vitest.config.mts"
+  },
+  "dependencies": {
+    "@opennextjs/cloudflare": "^1.14.7",
+    "@payloadcms/db-d1-sqlite": "3.69.0",
+    "@payloadcms/next": "3.69.0",
+    "@payloadcms/plugin-multi-tenant": "^3.69.0",
+    "@payloadcms/richtext-lexical": "3.69.0",
+    "@payloadcms/storage-r2": "3.69.0",
+    "@payloadcms/ui": "3.69.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "17.2.3",
+    "graphql": "^16.12.0",
+    "next": "16.1.1",
+    "payload": "3.69.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.57.0",
+    "@testing-library/react": "16.3.1",
+    "@types/node": "^25.0.3",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.1.2",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "16.1.1",
+    "jsdom": "27.3.0",
+    "playwright": "1.57.0",
+    "playwright-core": "1.57.0",
+    "prettier": "^3.7.4",
+    "typescript": "5.9.3",
+    "vite-tsconfig-paths": "6.0.3",
+    "vitest": "4.0.16",
+    "wrangler": "~4.56.0"
+  },
+  "engines": {
+    "node": "^24.12.0",
+    "pnpm": "^9 || ^10"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "esbuild",
+      "unrs-resolver"
+    ]
+  },
+  "cloudflare": {
+    "bindings": {
+      "PAYLOAD_SECRET": {
+        "description": "Generate a random string using `openssl rand -hex 32`"
+      }
+    }
+  }
+}
