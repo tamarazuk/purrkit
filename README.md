@@ -136,9 +136,9 @@ pnpm --filter template dev
 ```
 purrkit/
 ├── apps/
-│   ├── generator/          # Website generator form (Next.js)
-│   └── api/                # API server for website generation
-│   └── (future: cms, marketing)
+│   ├── frontend/           # Portal frontend - currently just generator form (Next.js)
+│   └── api/                # API server for portal - currently only handles website generation (Express)
+│   └── (future: cms, marketing.js)
 ├── packages/
 │   ├── ui/                 # Shared UI components (future)
 │   ├── eslint-config/
