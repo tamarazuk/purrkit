@@ -14,7 +14,6 @@ PurrKit is an open-source platform designed to help cat rescue organizations cre
 
 [![Payload CMS](https://img.shields.io/badge/Payload_CMS-000000?style=flat&logo=payloadcms&logoColor=white)](https://payloadcms.com/)
 
----
 
 ## 🎯 What is PurrKit?
 
