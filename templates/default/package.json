@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --port 3051",
+    "dev": "next dev --port 3070",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -13,18 +13,18 @@
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^0.562.0",
-    "next": "^16.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "next": "^16.1.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "devDependencies": {
     "@purrkit/typescript-config": "workspace:*",
-    "@tailwindcss/postcss": "^4.1.0",
-    "@types/node": "^22",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^25",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8",
-    "tailwindcss": "^4.1.0",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5"
   }
 }
