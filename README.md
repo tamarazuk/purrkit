@@ -108,6 +108,7 @@ We're starting with the website generator and CMS, but the vision extends to a f
 - Cloudflare Workers (CMS hosting)
 - Vercel/Netlify (generated sites)
 
+For development details, conventions, and experiments workflow, see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## 📦 Getting Started
 
@@ -204,6 +205,8 @@ We welcome contributions! PurrKit is being built to serve the rescue community, 
 - **Share with rescue organizations** who might benefit
 
 **Current Status:** Project is in early MVP development. External contributions will be welcomed once the core architecture is stable (Q1 2025).
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for guidelines and development notes.
 
 
 ## 💜 Connect

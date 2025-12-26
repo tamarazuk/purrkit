@@ -11,6 +11,7 @@ node_modules
 .env.development.local
 .env.test.local
 .env.production.local
+.env*.local
 
 # Testing
 coverage
@@ -23,6 +24,7 @@ coverage
 
 # Build Outputs
 .next/
+.open-next/
 out/
 build
 dist
@@ -39,3 +41,10 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# CMS local artifacts
+.wrangler
+/media
+
+# Experiments
+experiments/scratch/

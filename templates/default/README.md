@@ -19,17 +19,17 @@ Generated with love by [PurrKit](https://github.com/tamarazuk/purrkit) - empower
 
 ### Prerequisites
 
-- Node.js 18+
-- npm, yarn, or pnpm
+- Node.js 24+
+- pnpm
 
 ### Installation
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Run the development server
-npm run dev
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to see your website!
@@ -38,10 +38,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see your 
 
 ```bash
 # Create an optimized production build
-npm run build
+pnpm build
 
 # Start the production server
-npm start
+pnpm start
 ```
 
 ## Customization Guide
@@ -339,14 +339,14 @@ npm install next-themes
 
 ### TypeScript errors
 ```bash
-npm run lint
+pnpm lint
 ```
 
 ### Build fails
 ```bash
 # Clear Next.js cache
 rm -rf .next
-npm run build
+pnpm build
 ```
 
 ### Styling issues
