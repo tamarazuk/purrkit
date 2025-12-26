@@ -1,4 +1,6 @@
 packages:
-  - "apps/*"
-  - "packages/*"
-  - "templates/*"
+  - 'apps/*'
+  - 'packages/*'
+  - 'templates/*'
+  - 'experiments/active/*'
+  - '!experiments/archived/*'
