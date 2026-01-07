@@ -48,3 +48,5 @@ yarn-error.log*
 
 # Experiments
 experiments/scratch/
+/experiments/active/multi-tenant-backend/public/media
+/experiments/active/multi-tenant-backend/_mockups

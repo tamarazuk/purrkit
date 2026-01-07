@@ -2,6 +2,10 @@
   "name": "purrkit",
   "private": true,
   "scripts": {
+    "payload:gen:all": "pnpm --filter @purrkit/exp-multi-tenant-backend generate:types && pnpm --filter @purrkit/exp-multi-tenant-backend generate:importmap && pnpm --filter @purrkit/exp-multi-tenant-backend generate:schema",
+    "payload:gen:types": "pnpm --filter @purrkit/exp-multi-tenant-backend generate:types",
+    "payload:gen:importmap": "pnpm --filter @purrkit/exp-multi-tenant-backend generate:importmap",
+    "payload:gen:schema": "pnpm --filter @purrkit/exp-multi-tenant-backend generate:schema",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",

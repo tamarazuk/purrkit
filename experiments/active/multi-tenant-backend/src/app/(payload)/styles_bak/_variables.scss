@@ -1,0 +1,129 @@
+// Design Tokens from Mockups
+// Primary colors from mockups
+:root {
+  // Brand Colors
+  --brand-primary: #EA8230;        // Orange - CTAs, active states, hover accents
+  --brand-primary-hover: #D67120;  // Darker orange for hover states
+  --brand-secondary: #0F766E;       // Teal - Navigation active states, table headers, accents
+
+  // Background Colors (Light Mode)
+  --bg-light: #f8f5f6;               // Main background (list view)
+  --bg-light-alt: #FDFBF8;          // Alternative background (dashboard)
+  --surface-light: #ffffff;          // Cards, panels, surfaces
+
+  // Background Colors (Dark Mode)
+  --bg-dark: #230f11;               // Main dark background
+  --bg-dark-alt: #211811;           // Alternative dark background
+  --surface-dark: #2d1b1d;          // Dark mode surfaces
+
+  // Text Colors
+  --text-main: #181111;             // Primary text color
+  --text-muted: #666666;            // Muted/secondary text
+  --text-slate-500: #64748b;        // Slate 500 for secondary text
+  --text-slate-600: #475569;        // Slate 600
+  --text-slate-700: #334155;        // Slate 700
+  --text-slate-900: #0f172a;        // Slate 900 for headings
+
+  // Border Colors
+  --border-subtle: #E0E0E0;         // Subtle borders
+  --border-slate-200: #e2e8f0;      // Slate 200 borders
+  --border-slate-700: #334155;      // Slate 700 borders (dark mode)
+  --border-slate-800: #1e293b;      // Slate 800 borders (dark mode)
+
+  // Typography
+  --font-display: 'Spline Sans', sans-serif;
+  --font-body: 'Noto Sans', system-ui, sans-serif;
+
+  // Spacing & Layout
+  --radius-sm: 0.25rem;             // 4px
+  --radius-md: 0.5rem;              // 8px
+  --radius-lg: 0.75rem;             // 12px
+  --radius-xl: 1rem;                // 16px
+  --radius-full: 9999px;            // Full rounded
+
+  --nav-width: 256px;               // 64 * 4px = 256px (w-64)
+
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-primary: 0 4px 14px 0 rgba(234, 130, 48, 0.2); // Orange shadow for primary buttons
+
+  // Transitions
+  --transition-fast: 150ms;
+  --transition-base: 250ms;
+  --transition-slow: 400ms;
+
+  // Scrollbar
+  --scrollbar-width: 8px;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
+
+  // Payload theme variable mapping (minimal baseline)
+  --theme-bg: var(--bg-light);
+  --theme-input-bg: var(--surface-light);
+  --theme-text: var(--text-slate-900);
+  --theme-overlay: rgba(5, 5, 5, 0.5);
+
+  --theme-elevation-0: var(--bg-light);
+  --theme-elevation-50: var(--bg-light-alt);
+  --theme-elevation-100: var(--surface-light);
+  --theme-elevation-150: #f3f4f6;
+  --theme-elevation-200: var(--border-slate-200);
+  --theme-elevation-250: #cbd5e1;
+  --theme-elevation-300: #94a3b8;
+  --theme-elevation-400: var(--text-slate-500);
+  --theme-elevation-500: var(--text-slate-600);
+  --theme-elevation-600: var(--text-slate-700);
+  --theme-elevation-700: var(--text-slate-900);
+  --theme-elevation-800: #0f172a;
+  --theme-elevation-900: #0b1120;
+  --theme-elevation-1000: #05070b;
+
+  --theme-accent-500: var(--brand-primary);
+  --theme-accent-600: var(--brand-primary-hover);
+  --theme-accent-700: #c45f1b;
+  --theme-success-500: #1f8a61;
+  --theme-warning-500: #d38a00;
+  --theme-error-500: #d6533a;
+}
+
+// Dark Mode Overrides
+html[data-theme='dark'] {
+  --bg-light: var(--bg-dark);
+  --bg-light-alt: var(--bg-dark-alt);
+  --surface-light: var(--surface-dark);
+
+  --text-main: #ffffff;
+  --text-muted: #9ca3af;
+  --text-slate-500: #9ca3af;
+  --text-slate-600: #d1d5db;
+  --text-slate-700: #e5e7eb;
+  --text-slate-900: #ffffff;
+
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-slate-200: var(--border-slate-700);
+
+  --scrollbar-thumb: #334155;
+  --scrollbar-thumb-hover: #475569;
+
+  --theme-bg: var(--bg-dark);
+  --theme-input-bg: var(--surface-dark);
+  --theme-text: #f9fafb;
+  --theme-overlay: rgba(0, 0, 0, 0.7);
+
+  --theme-elevation-0: var(--bg-dark);
+  --theme-elevation-50: var(--bg-dark-alt);
+  --theme-elevation-100: var(--surface-dark);
+  --theme-elevation-150: #3a2426;
+  --theme-elevation-200: var(--border-slate-700);
+  --theme-elevation-250: #3f2a2c;
+  --theme-elevation-300: #4a3436;
+  --theme-elevation-400: #5a4547;
+  --theme-elevation-500: var(--text-slate-500);
+  --theme-elevation-600: var(--text-slate-600);
+  --theme-elevation-700: var(--text-slate-700);
+  --theme-elevation-800: var(--text-slate-900);
+  --theme-elevation-900: #ffffff;
+  --theme-elevation-1000: #ffffff;
+}

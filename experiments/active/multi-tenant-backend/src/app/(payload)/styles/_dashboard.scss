@@ -1,0 +1,93 @@
+// Dashboard View Styles
+// Payload's dashboard is minimal - focus on styling existing .card elements
+
+.dashboard {
+  padding: 1.5rem 2rem;
+  background-color: var(--bg-light-alt);
+  min-height: 100vh;
+}
+
+.collections {
+  &__wrap {
+    // Collections wrapper
+  }
+
+  &__group {
+    margin-bottom: 1.5rem;
+  }
+
+  &__label {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.75rem;
+  }
+
+  &__card-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.375rem; // 6px padding between cards (from widget padding)
+  }
+}
+
+// Dashboard cards (collection cards)
+.card {
+  // Base card styles from _card-utility.scss
+  padding: 1rem;
+  position: relative;
+
+  &--has-onclick {
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0 0 0.5rem 0;
+  }
+
+  &__actions {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  &__click {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+}
+
+// Widget wrapper (dashboard uses widgets)
+.widget {
+  padding: 6px; // From Payload HTML
+
+  &-wrapper {
+    // Widget content wrapper
+  }
+
+  &-content {
+    // Widget content
+  }
+}
+
+// Dark mode dashboard
+html[data-theme='dark'] {
+  .dashboard {
+    background-color: var(--bg-dark-alt);
+  }
+}
+

@@ -1,0 +1,26 @@
+@import '@payloadcms/ui/dist/scss/vars';
+@import '@payloadcms/ui/dist/scss/queries';
+
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+
+@import 'styles/theme';
+
+@include mid-break {
+  .template-minimal.login .tooltip {
+    display: block;
+  }
+}
+
+.banner .tooltip {
+  background-color: #fff;
+  color: var(--theme-elevation-1000);
+}
+
+.banner .tooltip--position-top::after {
+  border-top-color: #fff;
+}
+
+.banner .tooltip--position-bottom::after {
+  border-bottom-color: #fff;
+}

@@ -1,6 +1,19 @@
 {
   "$schema": "https://turborepo.com/schema.json",
   "ui": "tui",
+  "globalEnv": [
+    "CI",
+    "NODE_ENV",
+    "__NEXT_PRIVATE_ORIGIN",
+    "CLOUDFLARE_*",
+    "NEXT_PUBLIC_*",
+    "PURRKIT_*",
+    "PAYLOAD_*",
+    "VERCEL_*",
+    "CRON_SECRET",
+    "DATABASE_URL",
+    "PREVIEW_SECRET"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],

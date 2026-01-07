@@ -1,0 +1,45 @@
+// Reusable Card Utility
+// Based on mockup card styles - used across dashboard, edit view sidebars, and other components
+
+.card {
+  background-color: var(--surface-light);
+  border: 1px solid var(--border-slate-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+  }
+
+  // Card title styling
+  .card__title {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0;
+  }
+
+  // Card actions area
+  .card__actions {
+    // Action buttons within cards
+  }
+
+  // Clickable card overlay
+  .card__click {
+    // Full card click area
+  }
+}
+
+// Dark mode card adjustments
+html[data-theme='dark'] {
+  .card {
+    background-color: var(--surface-dark);
+    border-color: var(--border-slate-700);
+
+    &:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+

@@ -1,0 +1,66 @@
+{
+  "name": "@purrkit/exp-multi-tenant-backend",
+  "private": true,
+  "version": "1.0.0",
+  "description": "An example of a headless multi tenant application with Payload",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "_dev": "cross-env NODE_OPTIONS=--no-deprecation && pnpm seed & next dev --port 3080",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation && next dev --port 3080",
+    "lint": "cross-env NODE_OPTIONS=--no-deprecation next lint",
+    "check-types": "pnpm generate:types && tsc --noEmit",
+    "generate:importmap": "cross-env NODE_OPTIONS=--no-deprecation payload generate:importmap",
+    "generate:schema": "payload-graphql generate:schema",
+    "generate:types": "payload generate:types",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "seed": "npm run payload migrate:fresh",
+    "seed:once": "cross-env NODE_OPTIONS=--no-deprecation PAYLOAD_SEED_ON_INIT=true payload generate:types",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
+  },
+  "_comments": [
+    "Next.js must stay on v15 until Payload supports v16"
+  ],
+  "dependencies": {
+    "@payloadcms/admin-bar": "3.69.0",
+    "@payloadcms/db-sqlite": "^3.69.0",
+    "@payloadcms/live-preview-react": "3.69.0",
+    "@payloadcms/next": "^3.69.0",
+    "@payloadcms/plugin-form-builder": "3.69.0",
+    "@payloadcms/plugin-multi-tenant": "^3.69.0",
+    "@payloadcms/plugin-nested-docs": "3.69.0",
+    "@payloadcms/plugin-redirects": "3.69.0",
+    "@payloadcms/plugin-search": "3.69.0",
+    "@payloadcms/plugin-seo": "3.69.0",
+    "@payloadcms/richtext-lexical": "^3.69.0",
+    "@payloadcms/ui": "^3.69.0",
+    "clsx": "^2.1.1",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.3",
+    "graphql": "^16.12.0",
+    "next": "^15.5.9",
+    "payload": "^3.69.0",
+    "qs-esm": "^7.0.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@payloadcms/graphql": "^3.69.0",
+    "@purrkit/eslint-config": "workspace:*",
+    "@purrkit/typescript-config": "workspace:*",
+    "@swc/core": "^1.15.7",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^15.5.9",
+    "postcss": "8.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": "^24.12.0"
+  }
+}

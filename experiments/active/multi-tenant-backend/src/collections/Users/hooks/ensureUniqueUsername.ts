@@ -1,0 +1,79 @@
+import type { FieldHook, Where } from 'payload'
+
+import { ValidationError } from 'payload'
+
+import { getUserTenantIDs } from '../../../utilities/getUserTenantIDs'
+import { extractID } from '@/utilities/extractID'
+import { getTenantFromRequest } from '@/utilities/getTenantFromRequest'
+
+export const ensureUniqueUsername: FieldHook = async ({ data, originalDoc, req, value }) => {
+  // if value is unchanged, skip validation
+  if (originalDoc.username === value) {
+    return value
+  }
+
+  const constraints: Where[] = [
+    {
+      username: {
+        equals: value,
+      },
+    },
+  ]
+
+  const requestedTenant =
+    extractID(data?.tenants?.[0]?.tenant) ??
+    extractID(originalDoc?.tenants?.[0]?.tenant) ??
+    getTenantFromRequest(req)
+
+  if (requestedTenant) {
+    constraints.push({
+      'tenants.tenant': {
+        equals: requestedTenant,
+      },
+    })
+  }
+
+  const findDuplicateUsers = await req.payload.find({
+    collection: 'users',
+    where: {
+      and: constraints,
+    },
+  })
+
+  if (findDuplicateUsers.docs.length > 0 && req.user) {
+    const tenantIDs = getUserTenantIDs(req.user)
+    // if the user is an admin or has access to more than 1 tenant
+    // provide a more specific error message
+    if (req.user.role === 'super-admin' || tenantIDs.length > 1) {
+      const attemptedTenantChange = requestedTenant
+        ? await req.payload.findByID({
+            // @ts-ignore - requestedTenant will match DB ID type
+            id: requestedTenant,
+            collection: 'tenants',
+          })
+        : null
+
+      throw new ValidationError({
+        errors: [
+          {
+            message: attemptedTenantChange
+              ? `The "${attemptedTenantChange.name}" tenant already has a user with the username "${value}". Usernames must be unique per tenant.`
+              : `A user with the username ${value} already exists. Usernames must be unique per tenant.`,
+            path: 'username',
+          },
+        ],
+      })
+    }
+
+    throw new ValidationError({
+      errors: [
+        {
+          message: `A user with the username ${value} already exists. Usernames must be unique per tenant.`,
+          path: 'username',
+        },
+      ],
+    })
+  }
+
+  return value
+}

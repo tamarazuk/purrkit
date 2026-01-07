@@ -1,0 +1,351 @@
+// Edit/Document View Styles
+
+.template-default {
+  &__wrap {
+    // Main wrapper
+    background-color: var(--bg-light);
+    min-height: 100vh;
+  }
+}
+
+// Document header
+.doc-header {
+  padding: 1.5rem 2rem;
+  background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-slate-200);
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: 1.875rem; // 3xl
+    font-weight: 900;
+    color: var(--text-main);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--text-slate-500);
+
+    .separator {
+      width: 0.25rem;
+      height: 0.25rem;
+      border-radius: var(--radius-full);
+      background-color: var(--text-slate-300);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+}
+
+// Form fields
+.field-type {
+  margin-bottom: 1.5rem;
+
+  &__wrap {
+    // Field wrapper
+  }
+
+  // Text inputs
+  &.text {
+    input {
+      width: 100%;
+      padding: 0.625rem 0.75rem;
+      font-size: 0.875rem;
+      border: 1px solid var(--border-slate-200);
+      border-radius: var(--radius-md);
+      background-color: var(--surface-light);
+      color: var(--text-main);
+      transition: border-color var(--transition-base), box-shadow var(--transition-base);
+
+      &:focus {
+        outline: none;
+        border-color: var(--brand-primary);
+        box-shadow: 0 0 0 3px rgba(234, 130, 48, 0.1);
+      }
+    }
+  }
+
+  // Select fields
+  &.select {
+    // Select styling
+  }
+
+  // Textarea
+  textarea {
+    width: 100%;
+    padding: 0.625rem 0.75rem;
+    font-size: 0.875rem;
+    border: 1px solid var(--border-slate-200);
+    border-radius: var(--radius-md);
+    background-color: var(--surface-light);
+    color: var(--text-main);
+    resize: vertical;
+    min-height: 6rem;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+
+    &:focus {
+      outline: none;
+      border-color: var(--brand-primary);
+      box-shadow: 0 0 0 3px rgba(234, 130, 48, 0.1);
+    }
+  }
+}
+
+// Field labels
+.field-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-slate-500);
+  margin-bottom: 0.5rem;
+}
+
+// Rich text editor
+.rich-text {
+  &__editor {
+    background-color: var(--surface-light);
+    border: 1px solid var(--border-slate-200);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  &__toolbar {
+    border-bottom: 1px solid var(--border-slate-200);
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    background-color: var(--surface-light);
+  }
+
+  &__content {
+    padding: 1rem 1.5rem;
+    min-height: 20rem;
+  }
+}
+
+// Sidebar (publishing, taxonomy, etc.)
+.doc-header__sidebar,
+.edit-view__sidebar {
+  // Sidebar uses card utility for sections
+  .card {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Publishing card
+.publishing-card {
+  // Uses card utility
+  padding: 1.25rem;
+
+  &__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.25rem 0.625rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    &--draft {
+      background-color: #fef3c7;
+      color: #92400e;
+      border: 1px solid #f59e0b;
+    }
+
+    &--published {
+      background-color: #d1fae5;
+      color: #065f46;
+      border: 1px solid #10b981;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+
+      &-label {
+        color: var(--text-slate-500);
+      }
+
+      &-value {
+        color: var(--text-main);
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+// Taxonomy/Organization card
+.taxonomy-card {
+  // Uses card utility
+  padding: 1.25rem;
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .icon {
+      color: var(--brand-secondary);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-height: 10rem;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-fast);
+
+    &:hover {
+      background-color: #f8fafc;
+    }
+
+    input[type="checkbox"] {
+      width: 1rem;
+      height: 1rem;
+      border-color: var(--border-slate-200);
+      border-radius: var(--radius-sm);
+
+      &:checked {
+        background-color: var(--brand-secondary);
+        border-color: var(--brand-secondary);
+      }
+    }
+  }
+}
+
+// Featured image upload
+.featured-image {
+  // Uses card utility
+  padding: 1.25rem;
+
+  &__title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+  }
+
+  &__upload {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: var(--radius-md);
+    border: 2px dashed var(--border-slate-200);
+    background-color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all var(--transition-base);
+
+    &:hover {
+      border-color: var(--brand-secondary);
+      background-color: rgba(15, 118, 110, 0.05);
+      color: var(--brand-secondary);
+    }
+  }
+}
+
+// Dark mode edit view
+html[data-theme='dark'] {
+  .template-default__wrap {
+    background-color: var(--bg-dark);
+  }
+
+  .doc-header {
+    background-color: var(--bg-dark);
+    border-bottom-color: var(--border-slate-700);
+  }
+
+  .field-type {
+    &.text input,
+    textarea {
+      background-color: var(--surface-dark);
+      border-color: var(--border-slate-700);
+      color: var(--text-main);
+    }
+  }
+
+  .rich-text {
+    &__editor {
+      background-color: var(--surface-dark);
+      border-color: var(--border-slate-700);
+    }
+
+    &__toolbar {
+      border-bottom-color: var(--border-slate-700);
+      background-color: var(--surface-dark);
+    }
+  }
+
+  .taxonomy-card__item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .featured-image__upload {
+    background-color: rgba(30, 41, 59, 0.5);
+    border-color: var(--border-slate-700);
+
+    &:hover {
+      border-color: var(--brand-secondary);
+      background-color: rgba(15, 118, 110, 0.1);
+    }
+  }
+}
+

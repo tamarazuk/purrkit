@@ -1,0 +1,227 @@
+// Global Components - Buttons, Inputs, Badges, Tables, etc.
+
+// ===== BUTTONS =====
+.btn {
+  font-family: var(--font-display);
+  font-weight: 600;
+  transition: all var(--transition-base);
+  border-radius: var(--radius-md);
+
+  // Primary button (orange)
+  &--style-primary,
+  &[class*="primary"] {
+    background-color: var(--brand-primary);
+    color: white;
+    box-shadow: var(--shadow-primary);
+
+    &:hover {
+      background-color: var(--brand-primary-hover);
+      box-shadow: 0 6px 20px 0 rgba(234, 130, 48, 0.3);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  // Secondary button (white with border)
+  &--style-secondary,
+  &[class*="secondary"] {
+    background-color: var(--surface-light);
+    border: 1px solid var(--border-slate-200);
+    color: var(--text-slate-700);
+    box-shadow: var(--shadow-sm);
+
+    &:hover {
+      background-color: #f8fafc;
+      border-color: var(--border-slate-200);
+    }
+  }
+
+  // Icon buttons
+  &--icon-only {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Round buttons
+  &--round {
+    border-radius: var(--radius-full);
+  }
+}
+
+// ===== INPUTS & FORM FIELDS =====
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea,
+select {
+  font-family: var(--font-display);
+  border: 1px solid var(--border-slate-200);
+  border-radius: var(--radius-md);
+  background-color: var(--surface-light);
+  color: var(--text-main);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+
+  &:focus {
+    outline: none;
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px rgba(234, 130, 48, 0.1);
+  }
+
+  &::placeholder {
+    color: var(--text-slate-500);
+  }
+}
+
+// Search input with icon
+.search-filter__input {
+  padding-left: 2.5rem; // Space for icon
+}
+
+// ===== STATUS BADGES =====
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid;
+
+  // Published (green)
+  &[class*="published"],
+  &--style-success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border-color: #10b981;
+  }
+
+  // Draft (gray/yellow)
+  &[class*="draft"],
+  &--style-warning {
+    background-color: #fef3c7;
+    color: #92400e;
+    border-color: #f59e0b;
+  }
+
+  // Review (amber)
+  &[class*="review"] {
+    background-color: #fef3c7;
+    color: #92400e;
+    border-color: #f59e0b;
+  }
+}
+
+// ===== TABLES =====
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      background-color: rgba(241, 245, 249, 0.8);
+      border-bottom: 1px solid var(--border-slate-200);
+
+      th {
+        padding: 1rem 1.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--brand-secondary);
+        text-align: left;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+      transition: background-color var(--transition-fast);
+
+      &:hover {
+        background-color: rgba(248, 250, 252, 0.8);
+      }
+
+      &:nth-child(even) {
+        background-color: rgba(248, 250, 252, 0.3);
+      }
+
+      td {
+        padding: 1rem 1.5rem;
+        font-size: 0.875rem;
+        color: var(--text-main);
+      }
+    }
+  }
+}
+
+// Dark mode table adjustments
+html[data-theme='dark'] {
+  .table {
+    thead tr {
+      background-color: rgba(30, 41, 59, 0.5);
+      border-bottom-color: var(--border-slate-700);
+
+      th {
+        color: #5eead4; // Teal-300 for dark mode
+      }
+    }
+
+    tbody tr {
+      border-bottom-color: rgba(51, 65, 85, 0.5);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      &:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.02);
+      }
+    }
+  }
+
+  .pill {
+    &[class*="published"],
+    &--style-success {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: #6ee7b7;
+      border-color: rgba(16, 185, 129, 0.2);
+    }
+
+    &[class*="draft"],
+    &--style-warning {
+      background-color: rgba(245, 158, 11, 0.1);
+      color: #fcd34d;
+      border-color: rgba(245, 158, 11, 0.2);
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  textarea,
+  select {
+    background-color: var(--surface-dark);
+    border-color: var(--border-slate-700);
+    color: var(--text-main);
+  }
+
+  .btn {
+    &--style-secondary {
+      background-color: var(--surface-dark);
+      border-color: var(--border-slate-700);
+      color: var(--text-slate-300);
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+    }
+  }
+}
+

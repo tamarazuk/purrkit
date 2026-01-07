@@ -1,0 +1,54 @@
+@import 'tailwind-export';
+
+// Note: Payload UI vars and queries are imported in custom.scss, so they're available here
+// Import theme components
+@import 'variables';
+@import 'card-utility';
+@import 'components';
+@import 'navigation';
+@import 'dashboard';
+@import 'list-view';
+@import 'edit-view';
+
+// Load Spline Sans font
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+
+// Load Material Symbols (if not already loaded)
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+// Apply display font to body and headings
+body {
+  font-family: var(--font-display);
+  background-color: var(--bg-light);
+  color: var(--text-main);
+}
+
+// Custom scrollbar styling (matching mockups)
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+
+  &:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+}
+
+// Dark mode scrollbar
+html[data-theme='dark'] {
+  ::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+
+    &:hover {
+      background: var(--scrollbar-thumb-hover);
+    }
+  }
+}
