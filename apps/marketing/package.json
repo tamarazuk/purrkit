@@ -1,0 +1,32 @@
+{
+  "name": "@purrkit/marketing",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --port 3030",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --max-warnings 0",
+    "check-types": "next typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "lucide-react": "^0.562.0",
+    "next": "16.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@purrkit/eslint-config": "workspace:*",
+    "@purrkit/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^25.0.3",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "daisyui": "^5.5.14",
+    "eslint": "^9.39.2",
+    "postcss": "^8.5",
+    "tailwindcss": "^4.1.18",
+    "typescript": "5.9.3"
+  }
+}
