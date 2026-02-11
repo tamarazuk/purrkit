@@ -1,19 +1,14 @@
 {
   "extends": "@purrkit/typescript-config/nextjs.json",
   "compilerOptions": {
-    "plugins": [
-      {
-        "name": "next",
-      },
-    ],
     "paths": {
       "@/*": ["./*"],
     },
   },
   "include": [
+    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "next-env.d.ts",
     "next.config.js",
     ".next/types/**/*.ts",
   ],

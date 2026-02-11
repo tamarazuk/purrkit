@@ -1,0 +1,173 @@
+@import "@fontsource/inter/latin.css";
+@import "@fontsource/league-spartan/latin.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'League Spartan', sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight;
+  }
+}
+
+@layer base {
+  [data-theme="purrkitlight"] {
+    color-scheme: light;
+    --color-base-100: #FAFAF8;
+    --color-base-200: #f2f2f0;
+    --color-base-300: #e5e5e3;
+    --color-base-content: #1F2937;
+    --color-primary: #0F766E;
+    --color-primary-content: #FFFFFF;
+    --color-secondary: #EA8230;
+    --color-secondary-content: #FFFFFF;
+    --color-accent: #EA8230;
+    --color-accent-content: #FFFFFF;
+    --color-neutral: #1F2937;
+    --color-neutral-content: #FAFAF8;
+    --color-info: #0369A1;
+    --color-info-content: #FFFFFF;
+    --color-success: #059669;
+    --color-success-content: #FFFFFF;
+    --color-warning: #D97706;
+    --color-warning-content: #FFFFFF;
+    --color-error: #DC2626;
+    --color-error-content: #FFFFFF;
+    --radius-selector: 0.5rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+    --b1: 98.455% 0.0026 106.448;
+    --b2: 96.059% 0.0027 106.449;
+    --b3: 92.134% 0.0027 106.452;
+    --bc: 27.808% 0.0296 256.848;
+    --p: 51.094% 0.0861 186.391;
+    --pc: 100.000% 0.0000 89.876;
+    --s: 70.846% 0.1566 54.206;
+    --sc: 100.000% 0.0000 89.876;
+    --a: 70.846% 0.1566 54.206;
+    --ac: 100.000% 0.0000 89.876;
+    --n: 27.808% 0.0296 256.848;
+    --nc: 98.455% 0.0026 106.448;
+    --in: 49.998% 0.1193 242.749;
+    --inc: 100.000% 0.0000 89.876;
+    --su: 59.597% 0.1274 163.225;
+    --suc: 100.000% 0.0000 89.876;
+    --wa: 66.584% 0.1574 58.318;
+    --wac: 100.000% 0.0000 89.876;
+    --er: 57.710% 0.2152 27.325;
+    --erc: 100.000% 0.0000 89.876;
+  }
+
+  [data-theme="purrkitdark"] {
+    color-scheme: dark;
+    --color-base-100: #1F2937;
+    --color-base-200: #161d27;
+    --color-base-300: #0d1117;
+    --color-base-content: #FAFAF8;
+    --color-primary: #0F766E;
+    --color-primary-content: #FFFFFF;
+    --color-secondary: #EA8230;
+    --color-secondary-content: #FFFFFF;
+    --color-accent: #EA8230;
+    --color-accent-content: #FFFFFF;
+    --color-neutral: #FAFAF8;
+    --color-neutral-content: #1F2937;
+    --color-info: #3B82F6;
+    --color-info-content: #FFFFFF;
+    --color-success: #10B981;
+    --color-success-content: #FFFFFF;
+    --color-warning: #F59E0B;
+    --color-warning-content: #1F2937;
+    --color-error: #EF4444;
+    --color-error-content: #FFFFFF;
+    --radius-selector: 0.5rem;
+    --radius-field: 0.25rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+    --b1: 27.808% 0.0296 256.848;
+    --b2: 22.858% 0.0221 257.285;
+    --b3: 17.628% 0.0140 258.357;
+    --bc: 98.455% 0.0026 106.448;
+    --p: 51.094% 0.0861 186.391;
+    --pc: 100.000% 0.0000 89.876;
+    --s: 70.846% 0.1566 54.206;
+    --sc: 100.000% 0.0000 89.876;
+    --a: 70.846% 0.1566 54.206;
+    --ac: 100.000% 0.0000 89.876;
+    --n: 98.455% 0.0026 106.448;
+    --nc: 27.808% 0.0296 256.848;
+    --in: 62.308% 0.1880 259.815;
+    --inc: 100.000% 0.0000 89.876;
+    --su: 69.587% 0.1491 162.480;
+    --suc: 100.000% 0.0000 89.876;
+    --wa: 76.859% 0.1647 70.080;
+    --wac: 27.808% 0.0296 256.848;
+    --er: 63.683% 0.2078 25.331;
+    --erc: 100.000% 0.0000 89.876;
+  }
+}
+
+@layer components {
+  .btn-primary,
+  .btn-secondary,
+  .btn-accent {
+    @apply text-white;
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover,
+  .btn-accent:hover {
+    @apply text-white;
+  }
+}
+
+/* Custom Gradient Text Utility */
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(to right, #EA8230, #0F766E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-base-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full transition-colors;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
