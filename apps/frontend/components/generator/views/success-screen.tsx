@@ -20,8 +20,8 @@ export function SuccessScreen({ rescueName, onReset }: SuccessScreenProps) {
           Your website is ready!
         </h1>
         <p className="text-muted-foreground mb-8 text-lg text-pretty">
-          We've created a beautiful website for {rescueName}. It's ready to help
-          cats find their forever homes.
+          We&apos;ve created a beautiful website for {rescueName}. It&apos;s ready to
+          help cats find their forever homes.
         </p>
         <div className="flex justify-center gap-4">
           <Button size="lg" className="bg-teal hover:bg-teal/90 text-white">

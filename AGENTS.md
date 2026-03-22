@@ -41,7 +41,7 @@ pnpm dlx create-next-app@latest .
     "dev": "next dev --port 3075",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint . --max-warnings 0",
     "check-types": "next typegen && tsc --noEmit"
   },
   "dependencies": {
@@ -56,7 +56,6 @@ pnpm dlx create-next-app@latest .
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
     "eslint": "^9.39.2",
-    "eslint-config-next": "16.1.1",
     "typescript": "5.9.3"
   }
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { ButtonLink } from '@/components/button'
 import CatCard from '@/components/cat-card'
 import { cats } from '@/data/cats'
@@ -21,7 +22,7 @@ export default function Home() {
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
               </svg>
-              <span>We've saved 500+ cats this year!</span>
+              <span>We&apos;ve saved 500+ cats this year!</span>
             </div>
 
             <h1 className="text-5xl leading-[1.1] font-bold text-slate-900 md:text-7xl">
@@ -62,9 +63,11 @@ export default function Home() {
 
           <div className="relative">
             <div className="relative z-10 rotate-3 overflow-hidden rounded-[3rem] border-8 border-white shadow-2xl">
-              <img
+              <Image
                 src="https://images.unsplash.com/photo-1443610762694-d993e81f69d9?w=1200&q=80"
                 alt="Happy cat"
+                width={1200}
+                height={900}
                 className="h-auto w-full object-cover"
               />
             </div>
@@ -176,15 +179,17 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-secondary relative overflow-hidden py-24">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="https://images.unsplash.com/photo-1548546738-8509cb246ed3?w=1600&q=80"
             alt="Background"
-            className="h-full w-full object-cover opacity-20 mix-blend-multiply"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-20 mix-blend-multiply"
           />
         </div>
         <div className="relative z-10 container mx-auto space-y-8 px-4 text-center">
           <h2 className="font-hand text-4xl font-bold text-white md:text-5xl">
-            Can't Adopt? You Can Still Help!
+            Can&apos;t Adopt? You Can Still Help!
           </h2>
           <p className="mx-auto max-w-2xl text-xl text-white/90">
             Your donations provide food, medical care, and shelter for cats

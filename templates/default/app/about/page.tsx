@@ -65,15 +65,15 @@ export default function About() {
                 effort to help cats in need.
               </p>
               <p>
-                Over the years, we've rescued, rehabilitated, and rehomed over
+                Over the years, we&apos;ve rescued, rehabilitated, and rehomed over
                 500 cats. From tiny kittens to senior cats, from healthy cats to
                 those needing special medical care, we believe every cat
                 deserves a chance at a happy life.
               </p>
               <p>
-                Today, we're proud to work with a network of dedicated
+                Today, we&apos;re proud to work with a network of dedicated
                 volunteers, foster families, and community partners who share
-                our passion for feline welfare. Together, we're making a real
+                our passion for feline welfare. Together, we&apos;re making a real
                 difference in the lives of cats across the Portland area.
               </p>
             </div>

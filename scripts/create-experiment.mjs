@@ -59,7 +59,7 @@ const packageJson = {
           'scratch:dev': 'next dev --port 3075',
           'scratch:build': 'next build',
           'scratch:start': 'next start',
-          'scratch:lint': 'next lint',
+          'scratch:lint': 'eslint . --max-warnings 0',
           'scratch:check-types': 'next typegen && tsc --noEmit',
         }
       : {
@@ -71,7 +71,7 @@ const packageJson = {
           dev: 'next dev --port 3075',
           build: 'next build',
           start: 'next start',
-          lint: 'next lint',
+          lint: 'eslint . --max-warnings 0',
           'check-types': 'next typegen && tsc --noEmit',
         }
       : {
@@ -94,7 +94,6 @@ const packageJson = {
         '@types/react': '19.2.7',
         '@types/react-dom': '19.2.3',
         eslint: '^9.39.2',
-        'eslint-config-next': '16.1.1',
         postcss: isTailwindTemplate ? '8.5.0' : undefined,
         tailwindcss: isTailwindTemplate ? '4.1.18' : undefined,
         typescript: '5.9.3',

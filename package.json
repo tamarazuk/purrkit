@@ -13,9 +13,9 @@
     "reset:deps:deep": "pnpm store prune && pnpm reset:deps"
   },
   "devDependencies": {
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "turbo": "^2.7.2",
+    "turbo": "^2.8.20",
     "typescript": "5.9.3"
   },
   "pnpm": {

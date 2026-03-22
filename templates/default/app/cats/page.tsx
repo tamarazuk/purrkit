@@ -35,7 +35,7 @@ export default function Cats() {
           {cats.length === 0 && (
             <div className="text-center py-16">
               <p className="text-lg text-slate-600">
-                We don't have any cats available for adoption right now, but check back soon!
+                We don&apos;t have any cats available for adoption right now, but check back soon!
               </p>
             </div>
           )}
