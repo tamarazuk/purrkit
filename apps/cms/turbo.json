@@ -1,0 +1,27 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "env": ["CLOUDFLARE_ENV", "PAYLOAD_SECRET"]
+    },
+    "deploy": {
+      "cache": false,
+      "env": ["CLOUDFLARE_ENV", "PAYLOAD_SECRET"]
+    },
+    "deploy:app": {
+      "cache": false,
+      "env": ["CLOUDFLARE_ENV", "PAYLOAD_SECRET"]
+    },
+    "deploy:database": {
+      "cache": false,
+      "env": ["CLOUDFLARE_ENV", "PAYLOAD_SECRET"]
+    },
+    "dev": {
+      "env": ["CLOUDFLARE_ENV", "PAYLOAD_SECRET"]
+    },
+    "preview": {
+      "cache": false,
+      "env": ["CLOUDFLARE_ENV", "PAYLOAD_SECRET"]
+    }
+  }
+}

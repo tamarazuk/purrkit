@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'cataas.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
 }

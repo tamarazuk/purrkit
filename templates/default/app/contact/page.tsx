@@ -20,8 +20,8 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-muted-foreground text-xl">
-              We'd love to hear from you! Whether you're interested in adopting,
-              fostering, volunteering, or just have a question, we're here to
+              We&apos;d love to hear from you! Whether you&apos;re interested in adopting,
+              fostering, volunteering, or just have a question, we&apos;re here to
               help.
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function Contact() {
                   Get in Touch
                 </h2>
                 <p className="text-muted-foreground mb-8 text-lg">
-                  Fill out the form and we'll get back to you as soon as
+                  Fill out the form and we&apos;ll get back to you as soon as
                   possible, usually within 24-48 hours.
                 </p>
               </div>
