@@ -1,21 +1,21 @@
-import { nextJsConfig } from "@purrkit/eslint-config/next-js";
+import { nextJsConfig } from '@purrkit/eslint-config/next-js'
 
 /** @type {import("eslint").Linter.Config[]} */
 export default [
   ...nextJsConfig,
   {
-    ignores: ["cloudflare-env.d.ts"],
+    ignores: ['cloudflare-env.d.ts'],
   },
   {
-    files: ["next.config.ts"],
+    files: ['next.config.ts'],
     rules: {
-      "@typescript-eslint/no-explicit-any": "off",
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
   {
-    files: ["src/migrations/**/*.ts"],
+    files: ['src/migrations/**/*.ts'],
     rules: {
-      "@typescript-eslint/no-unused-vars": "off",
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
-];
+]
